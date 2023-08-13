@@ -1,0 +1,12 @@
+[Unit]
+Description=Make a backup of the main printer configuration files
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi
+EnvironmentFile=/home/pi/printer_data/systemd/klipper-printer-backup.env
+ExecStart=/home/pi/klipper-printer-backup/backup.sh
+
+[Install]
+WantedBy=multi-user.target
