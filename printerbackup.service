@@ -9,4 +9,4 @@ EnvironmentFile=/home/pi/printer_data/systemd/klipper-printer-backup.env
 ExecStart=/home/pi/klipper-printer-backup/backup.sh
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
